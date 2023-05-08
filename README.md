@@ -18,15 +18,15 @@ To install and run the WeSplit app, follow these steps:
 
 1. Clone the repository:https://github.com/blairduddy/WeSplit.git
 
-2. Open the project in Xcode by double-clicking the `WeSplit.xcodeproj` or `WeSplit.xcworkspace` file.
+2. Open the project in Xcode by double-clicking the `WeSplit.xcodeproj` file.
 
 3. Connect your iOS device or select a simulator, and then press the 'Run' button (or `Cmd + R`) to build and run the project.
 
 ## Usage
 
 1. Enter the bill amount in the appropriate text field.
-2. Select the desired tip percentage from the picker.
-3. Enter the number of people sharing the bill in the appropriate text field.
+2. Enter the number of people sharing the bill in the appropriate text field.
+3. Select the desired tip percentage from the picker.
 4. The app will display the amount each person needs to pay, including tip.
 
 ## License
