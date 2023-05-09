@@ -34,10 +34,6 @@ struct ContentView: View {
     }
     
     
-    
-    
-    
-    
     var body: some View {
         NavigationView{
             Form {
@@ -45,6 +41,8 @@ struct ContentView: View {
                     TextField("Amount", value: $chequeAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                         .keyboardType(.decimalPad)
                         .focused($amountIsFocused)
+                } header: {
+                    Text("Enter Total:")
                 }
                 
                 Section {
@@ -62,14 +60,12 @@ struct ContentView: View {
                 }
                 
                 Section{
-                    Picker("Tip percentage", selection: $tipPercentage) {
+                    Picker("Tip Percentage", selection: $tipPercentage) {
                         ForEach(tipPercentages, id: \.self) {
                             Text($0, format: .percent)
                         }
                     }
-                    .pickerStyle(.segmented)
-                } header: {
-                    Text("Tip percentage:")
+                    .pickerStyle(.navigationLink)
                 }
                 
                 Section {
@@ -92,10 +88,6 @@ struct ContentView: View {
         }
     }
 }
-
-
-
-
 
 
 
