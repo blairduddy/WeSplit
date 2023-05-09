@@ -27,6 +27,16 @@ struct ContentView: View {
         return amountPerPerson
     }
     
+    var totalCheque: Double {
+        let tipTotal = chequeAmount / 100 * Double(tipPercentage)
+        let totalCheque = chequeAmount + tipTotal
+        return totalCheque
+    }
+    
+    
+    
+    
+    
     
     var body: some View {
         NavigationView{
@@ -36,7 +46,13 @@ struct ContentView: View {
                         .keyboardType(.decimalPad)
                         .focused($amountIsFocused)
                 }
-                                            
+                
+                Section {
+                    Text(totalCheque, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                } header: {
+                    Text("Total with Tip:")
+                }
+                
                 Section {
                     Picker("Number of People", selection: $numberOfPeople) {
                         ForEach(2..<100) {
@@ -69,12 +85,19 @@ struct ContentView: View {
                     
                     Button("Done") {
                         amountIsFocused = false
+                        
                     }
                 }
             }
         }
     }
 }
+
+
+
+
+
+
 
 
 
