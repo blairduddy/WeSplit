@@ -37,4 +37,4 @@ This project is available under the MIT License. See the [LICENSE](LICENSE) file
 
 - [Hacking With Swift - 100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui)
 
-![Simulator Screenshot - iPhone 13 Pro - 2023-05-08 at 17 24 45](https://user-images.githubusercontent.com/64046027/236938659-0c10971b-f1ad-4606-8b8d-efddce23263b.png)
+<img src="https://user-images.githubusercontent.com/64046027/236938659-0c10971b-f1ad-4606-8b8d-efddce23263b.png" width="25%" />
