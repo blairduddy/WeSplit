@@ -14,7 +14,7 @@ struct ContentView: View {
     @State private var numberOfPeople = 2
     @State private var tipPercentage = 15
     
-    let tipPercentages = [10, 15, 20, 25, 0]
+    let tipPercentages = [0, 10, 15, 20, 25, 0]
     
     var totalPerPerson: Double {
         let peopleCount = Double(numberOfPeople + 2)
@@ -50,6 +50,7 @@ struct ContentView: View {
                 } header: {
                     Text("Total with Tip:")
                 }
+                .foregroundColor(tipPercentage == 0 ? .red : .primary)
                 
                 Section {
                     Picker("Number of People", selection: $numberOfPeople) {
